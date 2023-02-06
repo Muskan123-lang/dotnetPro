@@ -50,7 +50,9 @@ namespace ResultManagment.Controllers
         [HttpPost]
         public ActionResult CreateStudent([FromBody] StudentRecord studentRecord)
         {
+#pragma warning disable IDE0017 // Simplify object initialization
             var student = new Interfaces.Records();
+#pragma warning restore IDE0017 // Simplify object initialization
             student.RollNo = studentRecord.RollNo;
             student.Name = studentRecord.Name;
             student.DateOfBirth = studentRecord.DateOfBirth;
